@@ -10,11 +10,13 @@ public class SellItems extends Node {
 
     @Override
     public boolean validate() {
-        return false;
+        return true;
     }
 
     @Override
     public int execute() {
-        return 0;
+        int logAmount = c.getInventory().count(MyFirstNodeScript.LOG);
+        c.getGrandExchange().sellItem("Logs", logAmount, 1);
+        return 1000;
     }
 }

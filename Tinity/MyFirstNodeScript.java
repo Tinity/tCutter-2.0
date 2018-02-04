@@ -10,10 +10,10 @@ import org.dreambot.api.script.ScriptManifest;
 @ScriptManifest(category = Category.WOODCUTTING, name = "tCutter 2.0", author = "Tinity", version = 2.0)
 public class MyFirstNodeScript extends AbstractScript {
     public static final Area TREE_AREA = new Area(3132, 3451, 3119, 3428);
+    public static final Area GE_AREA = new Area(3170, 3483, 3159, 3494);
     public static final int LOG = 1511;
+    public static final int TREE = 1276;
 
-    // public static final int TREE = 1278;
-    //  public static final int OAK = 1751;
     public Node[] nodes;
     private boolean geActive;
 

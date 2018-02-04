@@ -5,7 +5,7 @@ import Tinity.Node;
 import org.dreambot.api.methods.MethodProvider;
 import org.dreambot.api.methods.container.impl.bank.BankLocation;
 
-import static Tinity.MyFirstNodeScript.LOG;
+
 
 public class FullNode extends Node {
     public FullNode(MyFirstNodeScript main) {
@@ -22,7 +22,8 @@ public class FullNode extends Node {
     public int execute() {
         MethodProvider.log("banking...");
         if (c.getBank().isOpen()) {
-            if (c.getInventory().contains(LOG)) {
+            //if (c.getInventory().contains(item -> item != null && item.getName().contains(" log"))) {
+            if (c.getInventory().contains(MyFirstNodeScript.LOG)){
                 c.getBank().depositAllExcept(item -> item != null && item.getName().contains(" axe"));
             }
         } else {
