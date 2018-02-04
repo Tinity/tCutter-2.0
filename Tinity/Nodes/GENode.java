@@ -2,11 +2,14 @@ package Tinity.Nodes;
 
 import Tinity.MyFirstNodeScript;
 import Tinity.Node;
-import Tinity.Nodes.GENodes.*;
+import Tinity.Nodes.GENodes.CheckBank;
+import Tinity.Nodes.GENodes.OpenGE;
+import Tinity.Nodes.GENodes.SellItems;
 
 
 public class GENode extends Node {
     private final Node[] nodes;
+
     public GENode(MyFirstNodeScript main) {
         super(main);
         nodes = new Node[]{
@@ -23,12 +26,12 @@ public class GENode extends Node {
 
     @Override
     public int execute() {
-       for(Node node : nodes){
-           if(node.validate()){
-               return node.execute();
-           }
-       }
+        for (Node node : nodes) {
+            if (node.validate()) {
+                return node.execute();
+            }
+        }
         c.setGeActive(false);
-       return 1000;
+        return 1000;
     }
 }

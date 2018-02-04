@@ -10,7 +10,7 @@ public class WalkNode extends Node {
 
     @Override
     public boolean validate() {
-        return !MyFirstNodeScript.TREE_AREA.contains(c.getLocalPlayer()) && !c.getInventory().isFull() && c.getInventory().contains(item -> item != null && item.getName().contains(" axe"));
+        return !MyFirstNodeScript.TREE_AREA.contains(c.getLocalPlayer());
     }
 
     @Override

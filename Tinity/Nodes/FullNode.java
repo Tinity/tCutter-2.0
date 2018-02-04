@@ -14,7 +14,7 @@ public class FullNode extends Node {
 
     @Override
     public boolean validate() {
-        return c.getInventory().isFull() && c.getInventory().contains(LOG);
+        return c.getInventory().isFull();
 
     }
 

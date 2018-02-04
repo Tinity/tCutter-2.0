@@ -3,7 +3,7 @@ package Tinity.Nodes.GENodes;
 import Tinity.MyFirstNodeScript;
 import Tinity.Node;
 
-public class SellItems extends Node{
+public class SellItems extends Node {
     public SellItems(MyFirstNodeScript main) {
         super(main);
     }
