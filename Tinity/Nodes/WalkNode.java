@@ -2,6 +2,7 @@ package Tinity.Nodes;
 
 import Tinity.MyFirstNodeScript;
 import Tinity.Node;
+import org.dreambot.api.methods.MethodProvider;
 
 public class WalkNode extends Node {
     public WalkNode(MyFirstNodeScript main) {

@@ -12,8 +12,8 @@ public class OpenGE extends Node {
 
     @Override
     public boolean validate() {
-       // return !c.getBank().contains(item -> item != null && item.getName().contains(" log") && c.getInventory().contains(item2 -> item2 != null && item2.getName().contains(" log")));
-        return !c.getBank().contains(MyFirstNodeScript.LOG) && c.getInventory().contains(MyFirstNodeScript.LOG);
+        return c.getInventory().contains(item -> item != null && item.getName().contains(" log"));
+
     }
 
 

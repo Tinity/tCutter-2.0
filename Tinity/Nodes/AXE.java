@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public enum AXE {
-    Bronze(1, 1351), Black(11, 1361), Mithril(21, 1355), Adamant(31, 1357);
+    Bronze(1, 1351,"Bronze axe"), Black(11, 1361,"Black axe"), Mithril(21, 1355,"Mithril axe"), Adamant(31, 1357,"Adamant axe");
 
 
     public static final List<Tinity.Nodes.AXE> LVL_SORTED;
@@ -16,17 +16,20 @@ public enum AXE {
     }
 
     private final int lvlReq, id;
+    private final String AxeName;
 
 
-    AXE(int lvlReq, int id) {
+    AXE(int lvlReq, int id, String AxeName) {
         this.lvlReq = lvlReq;
         this.id = id;
+        this.AxeName = AxeName;
     }
 
     public static Tinity.Nodes.AXE getAxeForLvl(int currAxe) {
         for (Tinity.Nodes.AXE id : LVL_SORTED) {
             if (currAxe >= id.getLvlReq()) {
                 return id;
+
             }
 
         }
@@ -39,5 +42,9 @@ public enum AXE {
 
     public int getId() {
         return id;
+    }
+
+    public String getAxeName(){
+        return AxeName;
     }
 }

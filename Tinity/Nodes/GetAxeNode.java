@@ -23,7 +23,7 @@ public class GetAxeNode extends Node {
         AXE currAxe = AXE.getAxeForLvl(c.getSkills().getRealLevel(Skill.WOODCUTTING));
         MethodProvider.log("ID " + currAxe.getId() + " LVL " + currAxe.getLvlReq());
 
-
+        MethodProvider.log("Taking out " + currAxe.getId());
         if (c.getBank().isOpen()) {
             if (c.getBank().contains(currAxe.getId())) {
                 c.getBank().withdraw(currAxe.getId());

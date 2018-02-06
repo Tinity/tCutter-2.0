@@ -15,8 +15,10 @@ public class SellItems extends Node {
 
     @Override
     public int execute() {
-        int logAmount = c.getInventory().count(MyFirstNodeScript.LOG);
-        c.getGrandExchange().sellItem("Logs", logAmount, 1);
+        int logAmount = c.getInventory().count(item -> item != null && item.getName().contains(" log"));
+        if (c.getGrandExchange().sellItem("Logs", logAmount, 1)) {
+            c.getGrandExchange().collect();
+        }
         return 1000;
     }
 }

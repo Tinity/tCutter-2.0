@@ -22,8 +22,8 @@ public class FullNode extends Node {
     public int execute() {
         MethodProvider.log("banking...");
         if (c.getBank().isOpen()) {
-            //if (c.getInventory().contains(item -> item != null && item.getName().contains(" log"))) {
-            if (c.getInventory().contains(MyFirstNodeScript.LOG)){
+            if (c.getInventory().contains(item -> item != null && item.getName().contains(" log")) || c.getInventory().contains(MyFirstNodeScript.LOG)) {
+
                 c.getBank().depositAllExcept(item -> item != null && item.getName().contains(" axe"));
             }
         } else {

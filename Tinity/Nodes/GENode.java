@@ -2,6 +2,7 @@ package Tinity.Nodes;
 
 import Tinity.MyFirstNodeScript;
 import Tinity.Node;
+import Tinity.Nodes.GENodes.BuyAxe;
 import Tinity.Nodes.GENodes.CheckBank;
 import Tinity.Nodes.GENodes.OpenGE;
 import Tinity.Nodes.GENodes.SellItems;
@@ -16,6 +17,7 @@ public class GENode extends Node {
                 new CheckBank(c),
                 new OpenGE(c),
                 new SellItems(c),
+                new BuyAxe(c),
         };
     }
 
